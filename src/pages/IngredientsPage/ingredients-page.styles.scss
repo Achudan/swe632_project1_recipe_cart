@@ -1,0 +1,15 @@
+.ingredients-page{
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-evenly;
+    // flex: 1 1 0;
+
+    .product-details{
+        width: 50%
+    }
+
+    .food-choices{
+        width: 100%
+    }
+}
