@@ -1,5 +1,6 @@
 const INGREDIENTS_DATA = {
     "chicken_pesto_parm" : {
+        "name" : "chicken pesto parm",
         "bases" : ['spinach', 'penne', 'orgula', 'rice'],
         "toppings": ['jalapeno', 'peas', 'mushrooms', 'brocolli', 'lentils'],
         "sauces" : ['mayonaisse', 'sour creme', 'hot sauce'],
