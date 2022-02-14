@@ -8,7 +8,7 @@ const INGREDIENTS_DATA = {
         "proteins" : ['chicken', 'bean']
     
     },
-    "Hot Honey Chicken": {
+    "hot_honey_chicken": {
         "bases" : [
                 'Warm Quinoa'
             ],
@@ -24,7 +24,7 @@ const INGREDIENTS_DATA = {
                 'Kale-Cabbage Slaw'
             ]
     },
-    "Fish Taco": {
+    "fish_taco": {
         "bases" : [
             'Warm Quinoa', 
             'Arugula'
@@ -43,7 +43,7 @@ const INGREDIENTS_DATA = {
             'lime cilantro jalapeno vinaigrette'
         ]
     },
-    "Crispy Rice Bowl": {
+    "crispy_rice_bowl": {
         "bases" : [
             'Arugula',
             'Warm Wild Rice'
@@ -64,7 +64,7 @@ const INGREDIENTS_DATA = {
             'spicy cashew dressing',
         ]
     },
-    "Guacamole Greens": {
+    "guacomole_greens": {
         "bases" : [
             'Chopped Romaine', 
             'Spring Mix'
@@ -84,7 +84,7 @@ const INGREDIENTS_DATA = {
             'Fresh Lime Squeeze'
         ],
     },
-    "Kale Caesar": {
+    "kale_caesar": {
         "bases" : [
             'Chopped Romaine', 
             'Shredded Kale', 
@@ -102,7 +102,7 @@ const INGREDIENTS_DATA = {
             'Fresh Lime Squeeze',
         ],
     },
-    "Chicken Tostada": {
+    "chicken_tostada": {
         "bases" : [
             'Warm Quinoa', 
             'Baby Spinach'
@@ -122,7 +122,7 @@ const INGREDIENTS_DATA = {
             'lime cilantro jalapeno vinaigrette'
         ]
     },
-    "Harvest Bowl": {
+    "harvest_bowl": {
         "bases" : [ 
             'Shredded Kale', 
             'Warm Wild Rice'
