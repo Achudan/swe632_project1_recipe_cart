@@ -2,31 +2,31 @@ const INGREDIENTS_DATA = {
 
     "chicken_pesto_parm": {
 
-        "bases" : ['spinach', 'penne', 'orgula', 'rice'],
+        "bases": ['spinach', 'penne', 'orgula', 'rice'],
         "toppings": ['jalapeno', 'peas', 'mushrooms', 'brocolli', 'lentils'],
-        "sauces" : ['mayonaisse', 'sour creme', 'hot sauce'],
-        "proteins" : ['chicken', 'bean']
-    
+        "sauces": ['mayonaisse', 'sour creme', 'hot sauce'],
+        "proteins": ['chicken', 'bean']
+
     },
     "hot_honey_chicken": {
-        "bases" : [
-                'Warm Quinoa'
-            ],
+        "bases": [
+            'Warm Quinoa'
+        ],
         "toppings": [
-                'Toasted Almonds'
-            ],
-        "sauces" : [
-                'Hot Honey Sauce'
-            ],
-        "premiums" : [
-                'Blackened Chicken', 
-                'Hot Roasted Sweet Potatoes',
-                'Kale-Cabbage Slaw'
-            ]
+            'Toasted Almonds'
+        ],
+        "sauces": [
+            'Hot Honey Sauce'
+        ],
+        "premiums": [
+            'Blackened Chicken',
+            'Hot Roasted Sweet Potatoes',
+            'Kale-Cabbage Slaw'
+        ]
     },
     "fish_taco": {
-        "bases" : [
-            'Warm Quinoa', 
+        "bases": [
+            'Warm Quinoa',
             'Arugula'
         ],
         "toppings": [
@@ -34,145 +34,145 @@ const INGREDIENTS_DATA = {
             'Shredded Cabbage',
             'Cilatro'
         ],
-        "premiums" : [
+        "premiums": [
             'Avocado',
             'Steelhead',
         ],
-        "sauces" :[
-            'sweetgreen hot sauce', 
+        "sauces": [
+            'sweetgreen hot sauce',
             'lime cilantro jalapeno vinaigrette'
         ]
     },
     "crispy_rice_bowl": {
-        "bases" : [
+        "bases": [
             'Arugula',
             'Warm Wild Rice'
         ],
-        "toppings": [ 
-            'Cilantro', 
-            'Raw Carrots',  
-            'Cucumber', 
-            'Shredded Cabbage', 
-            'Crispy Rice', 
+        "toppings": [
+            'Cilantro',
+            'Raw Carrots',
+            'Cucumber',
+            'Shredded Cabbage',
+            'Crispy Rice',
             'Toasted Almonds'
         ],
-        "premiums" : [
+        "premiums": [
             'Blackened Chicken'
         ],
-        "sauces" : [
+        "sauces": [
             'Fresh Lime Squeeze',
             'spicy cashew dressing',
         ]
     },
     "guacomole_greens": {
-        "bases" : [
-            'Chopped Romaine', 
+        "bases": [
+            'Chopped Romaine',
             'Spring Mix'
         ],
         "toppings": [
-            'Tortilla Chips', 
-            'Tomato', 
-            'Red Onion', 
+            'Tortilla Chips',
+            'Tomato',
+            'Red Onion',
             'Shredded Cabbage'
         ],
-        "premiums" : [
+        "premiums": [
             'Avocado',
             'Roasted Chicken'
         ],
-        "sauces" : [
-            'lime cilantro jalapeno vinaigrette', 
+        "sauces": [
+            'lime cilantro jalapeno vinaigrette',
             'Fresh Lime Squeeze'
         ],
     },
     "kale_caesar": {
-        "bases" : [
-            'Chopped Romaine', 
-            'Shredded Kale', 
+        "bases": [
+            'Chopped Romaine',
+            'Shredded Kale',
         ],
         "toppings": [
-            'Tomato', 
+            'Tomato',
         ],
-        "premiums" : [
-            'Shaved Parmesan', 
-            'Parmesan Crisp', 
+        "premiums": [
+            'Shaved Parmesan',
+            'Parmesan Crisp',
             'Roasted Chicken',
         ],
-        "sauces" : [
+        "sauces": [
             'caesar dressing',
             'Fresh Lime Squeeze',
         ],
     },
     "chicken_tostada": {
-        "bases" : [
-            'Warm Quinoa', 
+        "bases": [
+            'Warm Quinoa',
             'Baby Spinach'
         ],
         "toppings": [
-            'Tortilla Chips', 
-            'Tomato', 
-            'Cilantro', 
+            'Tortilla Chips',
+            'Tomato',
+            'Cilantro',
             'Raw Carrots'
         ],
-        "premiums" : [
-            'Blackened Chicken', 
-            'Goat Cheese' 
+        "premiums": [
+            'Blackened Chicken',
+            'Goat Cheese'
         ],
-        "sauces" : [
-            'sweetgreen hot sauce', 
+        "sauces": [
+            'sweetgreen hot sauce',
             'lime cilantro jalapeno vinaigrette'
         ]
     },
     "harvest_bowl": {
-        "bases" : [ 
-            'Shredded Kale', 
+        "bases": [
+            'Shredded Kale',
             'Warm Wild Rice'
         ],
         "toppings": [
-            'Apples',  
-            'Roasted Sweet Potato', 
-            'Toasted Almonds' 
+            'Apples',
+            'Roasted Sweet Potato',
+            'Toasted Almonds'
         ],
-        "premiums" : [
-            'Goat Cheese', 
+        "premiums": [
+            'Goat Cheese',
             'Roasted Chicken'
         ],
-        "sauces" : [
+        "sauces": [
             'balsamic vinaigrette'
         ]
     },
-    "Master_Ingredients_List" : {
-        "bases" : [
-            'Warm Quinoa', 
-            'Baby Spinach', 
-            'Chopped Romaine', 
-            'Arugula', 
-            'Spring Mix', 
-            'Shredded Kale', 
+    "Master_Ingredients_List": {
+        "bases": [
+            'Warm Quinoa',
+            'Baby Spinach',
+            'Chopped Romaine',
+            'Arugula',
+            'Spring Mix',
+            'Shredded Kale',
             'Warm Wild Rice'
         ],
-    "toppings": [
-            'Tortilla Chips', 
-            'Tomato', 
-            'Cilantro', 
-            'Raw Carrots', 
-            'Apples', 
-            'Basil', 
-            'Chickpeas', 
-            'Cucumber', 
-            'Raw Beet', 
-            'Red Onion', 
-            'Roasted Sweet Potato', 
-            'Shredded Cabbage', 
-            'Spicy Broccoli', 
-            'Lentils', 
-            'Spicy Sunflower Seeds', 
-            'Crispy Rice', 
-            'Toasted Almonds', 
+        "toppings": [
+            'Tortilla Chips',
+            'Tomato',
+            'Cilantro',
+            'Raw Carrots',
+            'Apples',
+            'Basil',
+            'Chickpeas',
+            'Cucumber',
+            'Raw Beet',
+            'Red Onion',
+            'Roasted Sweet Potato',
+            'Shredded Cabbage',
+            'Spicy Broccoli',
+            'Lentils',
+            'Spicy Sunflower Seeds',
+            'Crispy Rice',
+            'Toasted Almonds',
             'Zaatar Breadcrumbs'
         ],
-    "sauces" : [
-            'sweetgreen hot sauce', 
-            'lime cilantro jalapeno vinaigrette', 
+        "sauces": [
+            'sweetgreen hot sauce',
+            'lime cilantro jalapeno vinaigrette',
             'green goddess ranch dressing',
             'balsamic vinaigrette',
             'balsamic vinegar',
@@ -186,14 +186,14 @@ const INGREDIENTS_DATA = {
             'Fresh Lemon Squeeze',
             'Red Chili'
         ],
-    "premiums" : [
-            'Blackened Chicken', 
-            'Goat Cheese', 
-            'Pickled Carrots + Celery', 
-            'Blue Cheese', 
-            'Shaved Parmesan', 
-            'Parmesan Crisp', 
-            'Hard Boiled Egg', 
+        "premiums": [
+            'Blackened Chicken',
+            'Goat Cheese',
+            'Pickled Carrots + Celery',
+            'Blue Cheese',
+            'Shaved Parmesan',
+            'Parmesan Crisp',
+            'Hard Boiled Egg',
             'Hot Roasted Sweet Potatoes',
             'Avocado',
             'Roasted Sesame Tofu',
