@@ -31,6 +31,8 @@ const IngredientsPage = () => {
         arr.push(key);
     });
 
+    var name = ingredientName.replace('_', ' ')
+
     return (
         <div className="ingredients-page">
             <div className="product-details">
@@ -49,7 +51,7 @@ const IngredientsPage = () => {
                 </div>
             </div>
             <div className="food-choices">
-                <p>reach</p>
+                <p>{name.toUpperCase()}</p>
 
                 <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
                     <div className="accordion-section">
