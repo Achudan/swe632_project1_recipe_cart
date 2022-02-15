@@ -11,7 +11,7 @@ import RecipeCard from '../../components/RecipeCard/recipe_card.component'
 // const imageDir = '../../components/RecipeDirectory/master_list_images'
 const IngredientsPage = () => {
     const { ingredientName } = useParams();
-    const [ingredientList] = useState(INGREDIENTS_DATA);
+    const [ingredientList, setIngredientList] = useState(INGREDIENTS_DATA);
 
     const handleSubmit = (elt) => {
         alert('Added to bag successfully');
@@ -33,13 +33,23 @@ const IngredientsPage = () => {
         recipeArr.forEach( elt => {
             elt = elt.toLowerCase()
             item = item.toLowerCase()
-            console.log(elt, item)
             if(item.includes(elt) === true){
                 flag = true;
                 return;
             }
         })
         return (flag?'selected':'not-selected')
+    }
+
+    function updateState(ingredientList, ingredientName, ingredient, item){
+        let index = ingredientList[ingredientName][item].indexOf(ingredient)
+        if(index === -1){
+            ingredientList[ingredientName][item].push(ingredient)
+            setIngredientList(ingredientList)
+            return
+        }
+        ingredientList[ingredientName][item].splice(index,1);
+        setIngredientList(ingredientList)
     }
 
     var arr = [];
@@ -54,11 +64,24 @@ const IngredientsPage = () => {
             <div className="product-details">
                 <h1>{ingredientList[ingredientName].name}</h1>
                 <ul className="selected-list">
-                    {ingredientList[ingredientName].bases.map((element, i) => {
-                        return (<li key={i}>{element}</li>)
-                    })}
+                    {
+                        arr.map((item, index)=>{
+                            return(
+                                ingredientList[ingredientName][item].map((element, i) => {
+                                    return (<li key={i}>{element}</li>)
+                                })
+                            )
+                        }
 
-                    <li>Add more</li>
+                        )
+                    
+                    // ingredientList[ingredientName].bases.map((element, i) => {
+                    //     return (<li key={i}>{element}</li>)
+                    // })
+                    
+                    }
+
+                    {/* <li>Add more</li> */}
                 </ul>
 
                 <div className="buttons">
@@ -84,11 +107,9 @@ const IngredientsPage = () => {
                                                     // {console.log(ingredientList[ingredientName][item], ingredient,checkIgredientPresent(ingredientList[ingredientName][item], ingredient))}
                                                     return (
                                                     
-                                                    <div className="dropdown-elements" key={index}>
+                                                    <div className="dropdown-elements" key={index} onClick = {() => (updateState(ingredientList, ingredientName, ingredient, item))}>
                                                         
                                                         <RecipeCard
-                                                            // image = {require(`${imageDir}/red onion.png`)} {"myClass " + (position === index ? 'active' : '')}
-                                                            // className = {`${checkIgredientPresent(ingredientList[ingredientName][item], ingredient)}?'selected':'non-selected'`}
                                                             className = {`${checkIgredientPresent(ingredientList[ingredientName][item], ingredient)}`}
                                                             image = {require('../../components/RecipeDirectory/master_list_images/red onion.png')}
                                                             title = {ingredient}
