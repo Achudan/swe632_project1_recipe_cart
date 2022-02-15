@@ -6,7 +6,9 @@ import CustomButton from "../../components/CustomButton/custombutton-component";
 
 import { IconContext } from 'react-icons';
 import { FiPlus, FiMinus } from 'react-icons/fi';
+import RecipeCard from '../../components/RecipeCard/recipe_card.component'
 
+// const imageDir = '../../components/RecipeDirectory/master_list_images'
 const IngredientsPage = () => {
     const { ingredientName } = useParams();
     const [ingredientList] = useState(INGREDIENTS_DATA);
@@ -26,6 +28,20 @@ const IngredientsPage = () => {
         setClicked(index);
     };
 
+    function checkIgredientPresent( recipeArr, item){
+        let flag = false;
+        recipeArr.forEach( elt => {
+            elt = elt.toLowerCase()
+            item = item.toLowerCase()
+            console.log(elt, item)
+            if(item.includes(elt) === true){
+                flag = true;
+                return;
+            }
+        })
+        return (flag?'selected':'not-selected')
+    }
+
     var arr = [];
     Object.keys(ingredientList['Master_Ingredients_List']).forEach(function (key) {
         arr.push(key);
@@ -39,7 +55,6 @@ const IngredientsPage = () => {
                 <h1>{ingredientList[ingredientName].name}</h1>
                 <ul className="selected-list">
                     {ingredientList[ingredientName].bases.map((element, i) => {
-                        console.log(element)
                         return (<li key={i}>{element}</li>)
                     })}
 
@@ -65,9 +80,19 @@ const IngredientsPage = () => {
                                         </div>
                                         <div className="dropdown-container">
                                             {clicked === index ? (
-                                                ingredientList['Master_Ingredients_List'][item].map((item, index) => {
-                                                    return (<div className="dropdown-elements" key={index}>
-                                                        <p>{item}</p>
+                                                ingredientList['Master_Ingredients_List'][item].map((ingredient, index) => {
+                                                    // {console.log(ingredientList[ingredientName][item], ingredient,checkIgredientPresent(ingredientList[ingredientName][item], ingredient))}
+                                                    return (
+                                                    
+                                                    <div className="dropdown-elements" key={index}>
+                                                        
+                                                        <RecipeCard
+                                                            // image = {require(`${imageDir}/red onion.png`)} {"myClass " + (position === index ? 'active' : '')}
+                                                            // className = {`${checkIgredientPresent(ingredientList[ingredientName][item], ingredient)}?'selected':'non-selected'`}
+                                                            className = {`${checkIgredientPresent(ingredientList[ingredientName][item], ingredient)}`}
+                                                            image = {require('../../components/RecipeDirectory/master_list_images/red onion.png')}
+                                                            title = {ingredient}
+                                                        />
                                                     </div>)
                                                 })
                                             ) : null}

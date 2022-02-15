@@ -68,7 +68,7 @@
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
     }
 
@@ -97,4 +97,8 @@
     p {
       font-size: 1rem;
     }
+}
+
+.selected{
+    color: aqua;
 }
