@@ -2,10 +2,23 @@ const INGREDIENTS_DATA = {
 
     "chicken_pesto_parm": {
 
-        "bases": ['spinach', 'Arugula', 'rice'],
-        "toppings": ['jalapeno', 'peas', 'mushrooms', 'brocolli', 'lentils'],
-        "sauces": ['mayonaisse', 'sour creme', 'hot sauce'],
-        "proteins": ['chicken', 'bean']
+        "bases": [
+            'Warm Quinoa',
+            'Baby Spinach'
+        ],
+        "toppings": [
+            'Zaatar Breadcrumbs',
+            'Tomato',
+            'Spicy Broccoli'
+        ],
+        "premiums": [
+            'Roasted Chicken',
+            'Shaved Parmesan'
+        ],
+        "sauces": [
+            'sweetgreen hot sauce',
+            'lime cilantro jalapeno vinaigrette'
+        ]
 
     },
     "hot_honey_chicken": {
@@ -139,6 +152,12 @@ const INGREDIENTS_DATA = {
         "sauces": [
             'balsamic vinaigrette'
         ]
+    },
+    "custom": {
+        "bases": [],
+        "toppings": [],
+        "premiums": [],
+        "sauces": []
     },
     "Master_Ingredients_List": {
         "bases": [

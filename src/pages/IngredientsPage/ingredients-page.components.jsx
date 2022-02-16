@@ -44,12 +44,26 @@ const IngredientsPage = () => {
     function updateState(ingredientList, ingredientName, ingredient, item){
         let index = ingredientList[ingredientName][item].indexOf(ingredient)
         if(index === -1){
+            // {console.log(ingredientList[ingredientName][item])}
             ingredientList[ingredientName][item].push(ingredient)
-            setIngredientList(ingredientList)
+            let newList = ingredientList[ingredientName][item]
+            setIngredientList({
+                ...ingredientList,
+                ingredientName:{
+                    item:newList
+                }
+            })
+            // {console.log(ingredientList[ingredientName][item])}
             return
         }
         ingredientList[ingredientName][item].splice(index,1);
-        setIngredientList(ingredientList)
+        let newList = ingredientList[ingredientName][item]
+            setIngredientList({
+                ...ingredientList,
+                ingredientName:{
+                    item:newList
+                }
+            })
     }
 
     var arr = [];
@@ -108,10 +122,10 @@ const IngredientsPage = () => {
                                                     return (
                                                     
                                                     <div className="dropdown-elements" key={index} onClick = {() => (updateState(ingredientList, ingredientName, ingredient, item))}>
-                                                        
+                                                        {/* {console.log(ingredient)} */}
                                                         <RecipeCard
                                                             className = {`${checkIgredientPresent(ingredientList[ingredientName][item], ingredient)}`}
-                                                            image = {require('../../components/RecipeDirectory/master_list_images/red onion.png')}
+                                                            image = {require(`../../components/RecipeDirectory/master_list_images/${item}/${ingredient.toLowerCase()}.png`)}
                                                             title = {ingredient}
                                                         />
                                                     </div>)

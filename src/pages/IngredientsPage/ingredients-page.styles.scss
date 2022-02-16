@@ -10,7 +10,8 @@
 
     .product-details{
         height: 100vh;
-        width: 50%;
+        width: 30%;
+        overflow: scroll;
         background-color: antiquewhite;
         ul{
             margin: 0; 
@@ -19,6 +20,7 @@
             li{
                 padding-bottom:15px;
                 list-style: none;
+                
             }
         }
 
@@ -99,6 +101,6 @@
     }
 }
 
-.selected{
-    color: aqua;
-}
+// .selected{
+//     color: aqua;
+// }

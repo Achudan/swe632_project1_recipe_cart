@@ -2,13 +2,6 @@
 const RECIPE_DATA = [
     {
         "title": "Chicken Pesto Parm",
-        "imageURL" : require("./recipe_images/recipe_chicken_pesto.jpg"),
-        "id": 1,
-        "Description" : 'Roasted chicken, spicy broccoli, tomatoes, shaved parmesan, za’atar breadcrumbs, warm quinoa, baby spinach, sweetgreen hot sauce, pesto vinaigrette',
-        "linkURL" : 'chicken_pesto_parm'
-    },
-    {
-        "title": "Chicken Pesto Parm",
         "imageURL" : require("./recipe_images/Chicken_Pesto_Parm.png"),
         "id": 2,
         "Description" : 'Warm bowl of chicken pesto and Parmesan',
