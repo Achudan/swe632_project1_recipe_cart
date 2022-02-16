@@ -59,7 +59,7 @@ const RECIPE_DATA = [
     {
         "title": "Chicken Crispy Tostada",
         "imageURL" : require("./recipe_images/Chicken_Tostada.png"),
-        "id": 3,
+        "id": 11,
         "Description" : 'Warm bowl of chicken tostada',
         "linkURL" : 'chicken_tostada'
     },
