@@ -16,7 +16,7 @@ const RECIPE_DATA = [
     },
     {
         "title": "Crispy Rice Bowl",
-        "imageURL" : require("./recipe_images/recipe_chicken_pesto.jpg"),
+        "imageURL" : require("./recipe_images/Crispy_Rice_Bowl.png"),
         "id": 4,
         "Description" : 'Warm bowl of crispy rice',
         "linkURL" : 'crispy_rice_bowl'
@@ -55,6 +55,13 @@ const RECIPE_DATA = [
         "id": 9,
         "Description" : 'Kale Caesar',
         "linkURL" : 'kale_caesar'
+    },
+    {
+        "title": "Chicken Crispy Tostada",
+        "imageURL" : require("./recipe_images/Chicken_Tostada.png"),
+        "id": 3,
+        "Description" : 'Warm bowl of chicken tostada',
+        "linkURL" : 'chicken_tostada'
     },
     {
         "title": "Customize your own",

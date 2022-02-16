@@ -77,6 +77,7 @@ const IngredientsPage = () => {
         <div className="ingredients-page">
             <div className="product-details">
                 <h1>{ingredientList[ingredientName].name}</h1>
+                {/* <div> */}
                 <ul className="selected-list">
                     {
                         arr.map((item, index)=>{
@@ -97,6 +98,7 @@ const IngredientsPage = () => {
 
                     {/* <li>Add more</li> */}
                 </ul>
+                {/* </div> */}
 
                 <div className="buttons">
                     <CustomButton type="submit" onClick={handleSubmit}>Add to cart</CustomButton>
