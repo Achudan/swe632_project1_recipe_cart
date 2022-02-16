@@ -13,6 +13,11 @@
         width: 30%;
         overflow: scroll;
         background-color: antiquewhite;
+        .heading{
+            font-size: large;
+            font-style: italic;
+            font-weight: bolder;
+        }
         ul{
             margin: 0; 
             padding: 15px 25px;
