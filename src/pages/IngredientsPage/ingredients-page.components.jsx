@@ -78,7 +78,7 @@ const IngredientsPage = () => {
             <div className="product-details">
                 <h1>{ingredientList[ingredientName].name}</h1>
                 {/* <div> */}
-                <span className="heading">Item in the bowl</span>
+                <span className="heading">Items in the bowl</span>
                 <ul className="selected-list">
                     {
                         arr.map((item, index)=>{
