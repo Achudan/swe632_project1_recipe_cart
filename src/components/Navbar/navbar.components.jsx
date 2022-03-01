@@ -11,7 +11,7 @@ const Navbar =  () =>(
             <Logo className='logo' />
         </Link>
         <div className="options">
-            <Link className="option" to="/ingredients/custom">CUSTOM</Link>
+            <Link className="option" to="/ingredients/custom">BUILD YOUR OWN RECIPE</Link>
             <Link className="option" to="/contact">CONTACT</Link>
             {/* {
                 currentUser?

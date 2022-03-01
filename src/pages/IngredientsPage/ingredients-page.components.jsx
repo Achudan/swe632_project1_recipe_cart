@@ -7,14 +7,28 @@ import CustomButton from "../../components/CustomButton/custombutton-component";
 import { IconContext } from 'react-icons';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 import RecipeCard from '../../components/RecipeCard/recipe_card.component'
+import CustomPopUp from "../../components/CustomPopUp/custompopup.components";
 
 // const imageDir = '../../components/RecipeDirectory/master_list_images'
 const IngredientsPage = () => {
     const { ingredientName } = useParams();
     const [ingredientList, setIngredientList] = useState(INGREDIENTS_DATA);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const togglePopup = () => {
+        setIsOpen(!isOpen);
+    }
 
     const handleSubmit = (elt) => {
-        alert('Added to bag successfully');
+        
+        
+        console.log(includedContents)
+        if (includedContents.length === 0) {
+            togglePopup()
+        }
+        else{
+            alert('Added to bag successfully');
+        }
     }
 
     const [clicked, setClicked] = useState(false);
@@ -28,49 +42,49 @@ const IngredientsPage = () => {
         setClicked(index);
     };
 
-    function checkIgredientPresent( recipeArr, item){
+    function checkIgredientPresent(recipeArr, item) {
         let flag = false;
-        recipeArr.forEach( elt => {
+        recipeArr.forEach(elt => {
             elt = elt.toLowerCase()
             item = item.toLowerCase()
-            if(item.includes(elt) === true){
+            if (item.includes(elt) === true) {
                 flag = true;
                 return;
             }
         })
-        return (flag?'selected':'not-selected')
+        return (flag ? 'selected' : 'not-selected')
     }
 
-    function updateState(ingredientList, ingredientName, ingredient, item){
+    function updateState(ingredientList, ingredientName, ingredient, item) {
         let index = ingredientList[ingredientName][item].indexOf(ingredient)
-        if(index === -1){
+        if (index === -1) {
             // {console.log(ingredientList[ingredientName][item])}
             ingredientList[ingredientName][item].push(ingredient)
             let newList = ingredientList[ingredientName][item]
             setIngredientList({
                 ...ingredientList,
-                ingredientName:{
-                    item:newList
+                ingredientName: {
+                    item: newList
                 }
             })
             // {console.log(ingredientList[ingredientName][item])}
             return
         }
-        ingredientList[ingredientName][item].splice(index,1);
+        ingredientList[ingredientName][item].splice(index, 1);
         let newList = ingredientList[ingredientName][item]
-            setIngredientList({
-                ...ingredientList,
-                ingredientName:{
-                    item:newList
-                }
-            })
+        setIngredientList({
+            ...ingredientList,
+            ingredientName: {
+                item: newList
+            }
+        })
     }
 
     var arr = [];
     Object.keys(ingredientList['Master_Ingredients_List']).forEach(function (key) {
         arr.push(key);
     });
-
+    var includedContents = [];
     var name = ingredientName.replace('_', ' ')
 
     return (
@@ -81,20 +95,21 @@ const IngredientsPage = () => {
                 <span className="heading">Items in the bowl</span>
                 <ul className="selected-list">
                     {
-                        arr.map((item, index)=>{
-                            return(
+                        arr.map((item, index) => {
+                            return (
                                 ingredientList[ingredientName][item].map((element, i) => {
+                                    { includedContents.push(element) }
                                     return (<li key={i}>{element}</li>)
                                 })
                             )
                         }
 
                         )
-                    
-                    // ingredientList[ingredientName].bases.map((element, i) => {
-                    //     return (<li key={i}>{element}</li>)
-                    // })
-                    
+
+                        // ingredientList[ingredientName].bases.map((element, i) => {
+                        //     return (<li key={i}>{element}</li>)
+                        // })
+
                     }
 
                     {/* <li>Add more</li> */}
@@ -104,6 +119,7 @@ const IngredientsPage = () => {
                 <div className="buttons">
                     <CustomButton type="submit" onClick={handleSubmit}>Add to cart</CustomButton>
                 </div>
+                {isOpen && <CustomPopUp title='Empty Bowl' description='Please add contents in the bowl' handleClose={togglePopup} />}
             </div>
             <div className="food-choices">
                 <p>{name.toUpperCase()}</p>
@@ -123,15 +139,15 @@ const IngredientsPage = () => {
                                                 ingredientList['Master_Ingredients_List'][item].map((ingredient, index) => {
                                                     // {console.log(ingredientList[ingredientName][item], ingredient,checkIgredientPresent(ingredientList[ingredientName][item], ingredient))}
                                                     return (
-                                                    
-                                                    <div className="dropdown-elements" key={index} onClick = {() => (updateState(ingredientList, ingredientName, ingredient, item))}>
-                                                        {/* {console.log(ingredient)} */}
-                                                        <RecipeCard
-                                                            className = {`${checkIgredientPresent(ingredientList[ingredientName][item], ingredient)}`}
-                                                            image = {require(`../../components/RecipeDirectory/master_list_images/${item}/${ingredient.toLowerCase()}.png`)}
-                                                            title = {ingredient}
-                                                        />
-                                                    </div>)
+
+                                                        <div className="dropdown-elements" key={index} onClick={() => (updateState(ingredientList, ingredientName, ingredient, item))}>
+                                                            {/* {console.log(ingredient)} */}
+                                                            <RecipeCard
+                                                                className={`${checkIgredientPresent(ingredientList[ingredientName][item], ingredient)}`}
+                                                                image={require(`../../components/RecipeDirectory/master_list_images/${item}/${ingredient.toLowerCase()}.png`)}
+                                                                title={ingredient}
+                                                            />
+                                                        </div>)
                                                 })
                                             ) : null}
                                         </div>
