@@ -1,6 +1,14 @@
 // import {RecipeImages} from './recipe_images'
 const RECIPE_DATA = [
     {
+        "title": "Customize Your Own Recipe",
+        "imageURL" : require("./recipe_images/customize_recipe.gif"),
+        "size": 'large',
+        "id": 0,
+        "Description" : 'Customize recipe',
+        "linkURL" : 'custom'
+    },
+    {
         "title": "Chicken Pesto Parm",
         "imageURL" : require("./recipe_images/Chicken_Pesto_Parm.png"),
         "id": 2,
@@ -62,14 +70,6 @@ const RECIPE_DATA = [
         "id": 11,
         "Description" : 'Warm bowl of chicken tostada',
         "linkURL" : 'chicken_tostada'
-    },
-    {
-        "title": "Customize your own",
-        "imageURL" : require("./recipe_images/customize_recipe.gif"),
-        "size": 'large',
-        "id": 10,
-        "Description" : 'Customize recipe',
-        "linkURL" : 'custom'
     }
 ];
 
