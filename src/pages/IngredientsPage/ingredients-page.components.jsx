@@ -20,13 +20,13 @@ const IngredientsPage = () => {
     }
 
     const handleSubmit = (elt) => {
-        
-        
+
+
         console.log(includedContents)
         if (includedContents.length === 0) {
             togglePopup()
         }
-        else{
+        else {
             alert('Added to bag successfully');
         }
     }
@@ -96,11 +96,16 @@ const IngredientsPage = () => {
                 <ul className="selected-list">
                     {
                         arr.map((item, index) => {
+                            // console.log(item)
                             return (
-                                ingredientList[ingredientName][item].map((element, i) => {
-                                    { includedContents.push(element) }
-                                    return (<li key={i}>{element}</li>)
-                                })
+                                <>
+                                    <div className="sub-category" style={{'font-weight': 'bolder', 'paddingTop':'10px'}}>{item}</div>
+                                    {ingredientList[ingredientName][item].map((element, i) => {
+                                        { includedContents.push(element) }
+                                        return (<li key={i}>{element}</li>)
+                                    }
+                                    )}
+                                </>
                             )
                         }
 
