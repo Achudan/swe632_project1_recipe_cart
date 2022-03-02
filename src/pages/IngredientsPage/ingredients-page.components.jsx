@@ -101,7 +101,7 @@ const IngredientsPage = () => {
                                 <>
                                     <div className="sub-category" style={{'font-weight': 'bolder', 'paddingTop':'10px'}}>{item}</div>
                                     {ingredientList[ingredientName][item].map((element, i) => {
-                                        { includedContents.push(element) }
+                                        includedContents.push(element) 
                                         return (<li key={i}>{element}</li>)
                                     }
                                     )}
