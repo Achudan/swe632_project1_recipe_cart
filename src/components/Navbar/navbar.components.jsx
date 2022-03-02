@@ -10,6 +10,12 @@ const Navbar =  () =>(
         <Link className='logo-container' to="/" >
             <Logo className='logo' />
         </Link>
+        <div className="options lefty">
+            <Link className='option' to="/" >
+                <span>TASTE BUDS</span>
+            </Link>
+        </div>
+        
         <div className="options">
             <Link className="option" to="/ingredients/custom">BUILD YOUR OWN RECIPE</Link>
             <Link className="option" to="/contact">CONTACT</Link>
