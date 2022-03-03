@@ -109,7 +109,7 @@ const IngredientsPage = () => {
                                     <div className="sub-category" style={{'font-weight': 'bolder', 'paddingTop':'10px'}}>{item.toUpperCase()}</div>
                                     {ingredientList[ingredientName][item].map((element, i) => {
                                         includedContents.push(element) 
-                                        return (<li key={i}>{element.toLowerCase()}</li>)
+                                        return (<li key={i}>{element}</li>)
                                     }
                                     )}
                                 </>
