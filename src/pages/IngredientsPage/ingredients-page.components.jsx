@@ -14,9 +14,14 @@ const IngredientsPage = () => {
     const { ingredientName } = useParams();
     const [ingredientList, setIngredientList] = useState(INGREDIENTS_DATA);
     const [isOpen, setIsOpen] = useState(false);
+    const [isShopped, setIsShopped] = useState(false);
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
+    }
+
+    const cartPopup = () => {
+        setIsShopped(!isShopped);
     }
 
     const handleSubmit = (elt) => {
@@ -27,7 +32,9 @@ const IngredientsPage = () => {
             togglePopup()
         }
         else {
-            alert('Added to bag successfully');
+            
+            cartPopup()
+            //alert('Added to bag successfully');
         }
     }
 
@@ -99,10 +106,10 @@ const IngredientsPage = () => {
                             // console.log(item)
                             return (
                                 <>
-                                    <div className="sub-category" style={{'font-weight': 'bolder', 'paddingTop':'10px'}}>{item}</div>
+                                    <div className="sub-category" style={{'font-weight': 'bolder', 'paddingTop':'10px'}}>{item.toUpperCase()}</div>
                                     {ingredientList[ingredientName][item].map((element, i) => {
                                         includedContents.push(element) 
-                                        return (<li key={i}>{element}</li>)
+                                        return (<li key={i}>{element.toLowerCase()}</li>)
                                     }
                                     )}
                                 </>
@@ -125,6 +132,7 @@ const IngredientsPage = () => {
                     <CustomButton type="submit" onClick={handleSubmit}>Add to cart</CustomButton>
                 </div>
                 {isOpen && <CustomPopUp title='Empty Bowl' description='Please add contents in the bowl' handleClose={togglePopup} />}
+                {isShopped && <CustomPopUp title='Recipe Items Added' description='Recipe Ingredients added to the cart successfully' handleClose={cartPopup} />}
             </div>
             <div className="food-choices">
                 <p>{name.toUpperCase()}</p>
@@ -136,7 +144,7 @@ const IngredientsPage = () => {
                                 return (
                                     <div key={index}>
                                         <div className="wrap" onClick={() => toggle(index)} key={index}>
-                                            <h1>{item}</h1>
+                                            <h1>{item.toUpperCase()}</h1>
                                             <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                                         </div>
                                         <div className="dropdown-container">
@@ -149,7 +157,7 @@ const IngredientsPage = () => {
                                                             {/* {console.log(ingredient)} */}
                                                             <RecipeCard
                                                                 className={`${checkIgredientPresent(ingredientList[ingredientName][item], ingredient)}`}
-                                                                image={require(`../../components/RecipeDirectory/master_list_images/${item}/${ingredient.toLowerCase()}.png`)}
+                                                                image={require(`../../components/RecipeDirectory/master_list_images/${item}/${ingredient}.png`)}
                                                                 title={ingredient}
                                                             />
                                                         </div>)

@@ -19,6 +19,7 @@ const Navbar =  () =>(
         <div className="options">
             <Link className="option" to="/ingredients/custom">BUILD YOUR OWN RECIPE</Link>
             <Link className="option" to="/contact">CONTACT</Link>
+            <Link className="option" to="/help">HELP</Link>
             {/* {
                 currentUser?
                 (<div className="option" onClick={()=>auth.signOut()}>{currentUser.displayName.toUpperCase()}</div>):
