@@ -18,7 +18,9 @@ const INGREDIENTS_DATA = {
         "sauces": [
             'sweetgreen hot sauce',
             'lime cilantro jalapeno vinaigrette'
-        ]
+        ],
+        "cost":'10.50 USD',
+        "calorie" : '450 Kcal'
 
     },
     "hot_honey_chicken": {
@@ -35,7 +37,9 @@ const INGREDIENTS_DATA = {
             'Blackened Chicken',
             'Hot Roasted Sweet Potatoes',
             'Kale Cabbage Slaw'
-        ]
+        ],
+        "cost":'9.50 USD',
+        "calorie" : '650 Kcal'
     },
     "fish_taco": {
         "bases": [
@@ -54,7 +58,9 @@ const INGREDIENTS_DATA = {
         "sauces": [
             'sweetgreen hot sauce',
             'lime cilantro jalapeno vinaigrette'
-        ]
+        ],
+        "cost":'11.50 USD',
+        "calorie" : '850 Kcal'
     },
     "crispy_rice_bowl": {
         "bases": [
@@ -75,7 +81,9 @@ const INGREDIENTS_DATA = {
         "sauces": [
             'Fresh Lime Squeeze',
             'spicy cashew dressing',
-        ]
+        ],
+        "cost":'12.50 USD',
+        "calorie" : '1150 Kcal'
     },
     "guacomole_greens": {
         "bases": [
@@ -96,6 +104,8 @@ const INGREDIENTS_DATA = {
             'lime cilantro jalapeno vinaigrette',
             'Fresh Lime Squeeze'
         ],
+        "cost":'8.50 USD',
+        "calorie" : '450 Kcal'
     },
     "kale_caesar": {
         "bases": [
@@ -114,6 +124,8 @@ const INGREDIENTS_DATA = {
             'caesar dressing',
             'Fresh Lime Squeeze',
         ],
+        "cost":'7.50 USD',
+        "calorie" : '550 Kcal'
     },
     "chicken_tostada": {
         "bases": [
@@ -133,7 +145,9 @@ const INGREDIENTS_DATA = {
         "sauces": [
             'sweetgreen hot sauce',
             'lime cilantro jalapeno vinaigrette'
-        ]
+        ],
+        "cost":'10.50 USD',
+        "calorie" : '474 Kcal'
     },
     "harvest_bowl": {
         "bases": [
@@ -151,13 +165,17 @@ const INGREDIENTS_DATA = {
         ],
         "sauces": [
             'balsamic vinaigrette'
-        ]
+        ],
+        "cost":'10.50 USD',
+        "calorie" : '500 Kcal'
     },
     "custom": {
         "bases": [],
         "toppings": [],
         "premiums": [],
-        "sauces": []
+        "sauces": [],
+        "cost":'13.50 USD',
+        "calorie" : '1000 Kcal'
     },
     "Master_Ingredients_List": {
         "bases": [
