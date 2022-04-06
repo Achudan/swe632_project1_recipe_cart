@@ -16,11 +16,11 @@ const Navbar =  () =>(
             <Link className='option' to="/" >
                 <span>TASTE BUDS</span>
             </Link>
-            
+            {/* <SearchBar className="option" placeholder="Enter dish name" data={RECIPE_DATA}/> */}
         </div>
         
         <div className="options">
-        <SearchBar className="option" placeholder="Enter dish name" data={RECIPE_DATA}/>
+        
             <Link className="option" to="/ingredients/custom">BUILD YOUR OWN RECIPE</Link>
             <Link className="option" to="/contact">CONTACT</Link>
             <Link className="option" to="/help">HELP</Link>
