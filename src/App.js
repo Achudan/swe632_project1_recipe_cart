@@ -5,6 +5,7 @@ import IngredientsPage from './pages/IngredientsPage/ingredients-page.components
 import Navbar from './components/Navbar/navbar.components';
 import Contact from './components/Contact/contact.component';
 import Help from './components/Help/help.component';
+import CartPage from './pages/CartPage/CartPage.components';
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/help' element={<Help/>}/>
         <Route path='/ingredients/:ingredientName' element={<IngredientsPage/>} />
+        <Route path='/cart' element={<CartPage/>}/>
       </Routes>
     </div>
   );
