@@ -1,12 +1,12 @@
 import React from "react";
 import './cart.styles.scss';
 import CART_DATA from "./cart-items";
-import CustomButton from "../../components/CustomButton/custombutton-component";
+// import CustomButton from "../../components/CustomButton/custombutton-component";
 
 const Cart = () => {
-    const handleSubmit = (elt) => {
-        console.log("Button Clicked")
-    }
+    // const handleSubmit = (elt) => {
+    //     console.log("Button Clicked")
+    // }
 
 return(
     // <div className="vrow">
