@@ -34,7 +34,10 @@ const IngredientsPage = () => {
         else {
             
             cartPopup()
-            //alert('Added to bag successfully');
+            //***************************to-do*********************************************
+            //store the included content in the redux store
+            // store the recipe name in the redux store
+            //*****************************************************************************
         }
     }
 
@@ -109,6 +112,7 @@ const IngredientsPage = () => {
                                     <div className="sub-category" style={{'font-weight': 'bolder', 'paddingTop':'10px'}}>{item.toUpperCase()}</div>
                                     {ingredientList[ingredientName][item].map((element, i) => {
                                         includedContents.push(element) 
+                                        console.log(includedContents)
                                         return (<li key={i}>{element}</li>)
                                     }
                                     )}

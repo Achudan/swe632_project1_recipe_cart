@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from './crown.svg';
 import { ReactComponent as Bag } from './bag.svg';
-import SearchBar from "../searchBar/searchBar.component";
+// import SearchBar from "../searchBar/searchBar.component";
 import './navbar.styles.scss';
-import RECIPE_DATA from '../RecipeDirectory/recipe_data'
+// import RECIPE_DATA from '../RecipeDirectory/recipe_data'
 // import { auth } from "../../firebase/firebase.utils";
 
 const Navbar =  () =>(
