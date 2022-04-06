@@ -5,7 +5,7 @@ const CART_DATA = [
         "title": "Chicken Pesto Parm",
         "id": 2,
         "quantity":2,
-        "price":"$10",
+        "price":"$10.50",
         "imageURL" : require("../RecipeDirectory/recipe_images/Chicken_Pesto_Parm.png"),
     },
     // {
@@ -19,21 +19,21 @@ const CART_DATA = [
         "title": "Chicken Tostada",
         "id": 4,
         "quantity":1,
-        "price":"$20",
+        "price":"$10.50",
         "imageURL" : require("../RecipeDirectory/recipe_images/Chicken_Tostada.png")
     },
     {
         "title": "Crispy Rice Bowl",
         "id": 3,
         "quantity":2,
-        "price":"$13",
+        "price":"$12.50",
         "imageURL" : require("../RecipeDirectory/recipe_images/Crispy_Rice_Bowl.png")
     },
     {
         "title": "Harvest Bowl",
         "id": 4,
         "quantity":1,
-        "price":"$20",
+        "price":"$10.50",
         "imageURL" : require("../RecipeDirectory/recipe_images/harvest_bowl.png")
     }
 ];
