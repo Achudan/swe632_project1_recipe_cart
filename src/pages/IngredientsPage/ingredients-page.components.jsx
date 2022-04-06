@@ -129,13 +129,14 @@ const IngredientsPage = () => {
                 {/* </div> */}
 
                 <div className="buttons">
+                    <span style={{'font-weight': 'bolder', 'paddingTop':'10px'}}>Price: {ingredientList[ingredientName]['cost']}</span>
                     <CustomButton type="submit" onClick={handleSubmit}>Add to cart</CustomButton>
                 </div>
                 {isOpen && <CustomPopUp title='Empty Bowl' description='Please add contents in the bowl' handleClose={togglePopup} />}
                 {isShopped && <CustomPopUp title='Recipe Items Added' description='Recipe Ingredients added to the cart successfully' handleClose={cartPopup} />}
             </div>
             <div className="food-choices">
-                <p>{name.toUpperCase()}</p>
+                <p>{name.toUpperCase()+' ('+ingredientList[ingredientName]['calorie']+' )'}</p>
 
                 <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
                     <div className="accordion-section">
