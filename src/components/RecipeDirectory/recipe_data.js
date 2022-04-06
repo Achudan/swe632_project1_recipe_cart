@@ -5,28 +5,28 @@ const RECIPE_DATA = [
         "imageURL" : require("./recipe_images/customize_recipe.gif"),
         "size": 'large',
         "id": 0,
-        "Description" : 'Customize recipe',
+        "Description" : 'You can build your own recipe by choosing this option',
         "linkURL" : 'custom'
     },
     {
         "title": "Chicken Pesto Parm",
         "imageURL" : require("./recipe_images/Chicken_Pesto_Parm.png"),
         "id": 2,
-        "Description" : 'Warm bowl of chicken pesto and Parmesan',
+        "Description" : 'Warm bowl of chicken dipped in pesto sauce and sprinkled with Parmesan cheese and herbs',
         "linkURL" : 'chicken_pesto_parm'
     },
     {
         "title": "Chicken Tostada",
         "imageURL" : require("./recipe_images/Chicken_Tostada.png"),
         "id": 3,
-        "Description" : 'Warm bowl of chicken tostada',
+        "Description" : 'Warm bowl of toasted chicken and garden vegetables',
         "linkURL" : 'chicken_tostada'
     },
     {
         "title": "Crispy Rice Bowl",
         "imageURL" : require("./recipe_images/Crispy_Rice_Bowl.png"),
         "id": 4,
-        "Description" : 'Warm bowl of crispy rice',
+        "Description" : 'Warm bowl of crispy rice, sauces, nuts and vegetables',
         "linkURL" : 'crispy_rice_bowl'
     },
     {
