@@ -2,7 +2,7 @@ import React from "react";
 import './menu-item.styles.scss';
 import { useNavigate } from 'react-router-dom';
 
-const Menuitem = ({ title, imageURL, size, linkURL }) => {
+const Menuitem = ({ title, Description, imageURL, size, linkURL }) => {
     const navigate = useNavigate();
     const handleClick = () => {
         navigate(`/ingredients/${linkURL}`);
@@ -17,7 +17,7 @@ const Menuitem = ({ title, imageURL, size, linkURL }) => {
                         <h1 className='title'>{title}</h1>
                         <span className='subtitle'>Shop Now</span>
                     </div >
-                    <div className='content'>hello!... This is description</div>
+                    <div className='content'>{Description}</div>
                 </div>
             </div>
         </div>
