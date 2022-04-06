@@ -57,15 +57,15 @@ return(
                 <table>
                     <tr>
                         <td><b>SUB TOTAL</b></td>
-                        <td>$12</td>
+                        <td>$37.50</td>
                     </tr>
                     <tr>
                         <td><b>TAX</b></td>
-                        <td>$1</td>
+                        <td>$2.50</td>
                     </tr>
                     <tr>
                         <td><b>TOTAL</b></td>
-                        <td>$13</td>
+                        <td>$40</td>
                     </tr>
                 </table>
                 

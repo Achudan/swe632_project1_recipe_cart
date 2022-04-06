@@ -11,9 +11,15 @@ const Menuitem = ({ title, imageURL, size, linkURL}) => {
         
              <div className={`${size} menu-item`} onClick={handleClick} >
                 <div className='background-image' style={{ backgroundImage: `url(${imageURL})` }} />
-                <div className='content'>
-                    <h1 className='title'>{title}</h1>
-                    <span className='subtitle'>Shop Now</span>
+                <div>
+                    <div className='content'>
+                        <h1 className='title'>{title}</h1>
+                        <span className='subtitle'>Shop Now</span>
+                    </div>
+
+                    <div  className='content'>
+                        hdgiusdhhsgfsdghshg
+                    </div>
                 </div>
             </div>   
     );
