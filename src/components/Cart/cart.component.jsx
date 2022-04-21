@@ -9,7 +9,7 @@ import CustomPopUp from "../../components/CustomPopUp/custompopup.components";
 const Cart = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isCancelOpen, setIsCancelOpen] = useState(false);
-    const [isShopped, setIsShopped] = useState(false);
+    //const [isShopped, setIsShopped] = useState(false);
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
