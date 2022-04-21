@@ -71,9 +71,7 @@
     height: 1px;
     width: 100%;
     box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3);
-    &:hover{
-        background-color: #a39898;
-    }
+    
     .dropdown-container{
         display: flex;
         flex-wrap: wrap;
@@ -99,6 +97,12 @@
         span {
           margin-right: 1.5rem;
         }
+
+        &:hover{
+            background-color: #373333;
+        }
+    
+       
     }
 }
 

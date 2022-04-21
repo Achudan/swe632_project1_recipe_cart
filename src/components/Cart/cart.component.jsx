@@ -103,7 +103,7 @@ return(
                 {isCancelOpen && <CustomPopUp title='Cancel Order' description='Are you sure to cancel the orders in the cart ?' handleClose={toggleCancelPopup} />}
                 {/* <button className="button">Checkout</button> */}
                 <CustomButton className="button" onClick={handleSubmit}>Checkout</CustomButton>
-                {isOpen && <CustomPopUp title='Confirm Checkout' description='Are you sure to checkout the items in the cart ?' handleClose={togglePopup} />}
+                {isOpen && <CustomPopUp title='Checkout Cart' description='Checking out cart will take you to the payment' handleClose={togglePopup} />}
             </div>
             <div className="test">
                 <img src={require('../RecipeDirectory/recipe_images/payment-method.jpg')} alt="payment" />
