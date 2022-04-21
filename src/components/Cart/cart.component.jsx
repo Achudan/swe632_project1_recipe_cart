@@ -69,7 +69,7 @@ return(
                         {/* <td>{item.title}</td> */}
                         <td>{item.price}</td>
                         
-                        <td> <a href="" target="_blank">Cancel</a></td>
+                        <td> <a href="/#" target="_blank">Cancel</a></td>
                     </tr>
                 ))}
             </table>
