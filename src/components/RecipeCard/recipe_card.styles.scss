@@ -33,9 +33,9 @@ $radius: 0.2rem;
 
 .card {
   overflow: visible;
-  width: 160px;
+  width: 160px !important;
   height: 250px;
-  box-shadow: 0 2px 20px $clr-gray300;
+  box-shadow: 10px 10px 50px $clr-gray300;
   border-radius: $radius;
   display: flex;
   flex-direction: column;
