@@ -9,12 +9,18 @@ import { FiPlus, FiMinus } from 'react-icons/fi';
 import RecipeCard from '../../components/RecipeCard/recipe_card.component'
 import CustomPopUp from "../../components/CustomPopUp/custompopup.components";
 
+import { useDispatch, useSelector } from 'react-redux'
+
 // const imageDir = '../../components/RecipeDirectory/master_list_images'
 const IngredientsPage = () => {
+
+    const cartItem = useSelector((state) => state.cartItem?.item)
     const { ingredientName } = useParams();
     const [ingredientList, setIngredientList] = useState(INGREDIENTS_DATA);
     const [isOpen, setIsOpen] = useState(false);
     const [isShopped, setIsShopped] = useState(false);
+
+    const dispatch = useDispatch()
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
@@ -25,15 +31,20 @@ const IngredientsPage = () => {
     }
 
     const handleSubmit = (elt) => {
-
-
-        console.log(includedContents)
+        console.log("Included",includedContents)
         if (includedContents.length === 0) {
             togglePopup()
         }
         else {
             
             cartPopup()
+
+            dispatch({
+                type : 'SET_ITEM',
+                payload : {
+                    item : includedContents
+                }
+            })
             //***************************to-do*********************************************
             //store the included content in the redux store
             // store the recipe name in the redux store
@@ -112,7 +123,6 @@ const IngredientsPage = () => {
                                     <div className="sub-category" style={{'font-weight': 'bolder', 'paddingTop':'10px'}}>{item.toUpperCase()}</div>
                                     {ingredientList[ingredientName][item].map((element, i) => {
                                         includedContents.push(element) 
-                                        console.log(includedContents)
                                         return (<li key={i}>{element}</li>)
                                     }
                                     )}
@@ -131,7 +141,6 @@ const IngredientsPage = () => {
                     {/* <li>Add more</li> */}
                 </ul>
                 {/* </div> */}
-
                 <div className="buttons">
                     <span style={{'font-weight': 'bolder', 'paddingTop':'10px'}}>Price: {ingredientList[ingredientName]['cost']}</span>
                     <CustomButton type="submit" onClick={handleSubmit}>Add to cart</CustomButton>

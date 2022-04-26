@@ -80,7 +80,7 @@ const INGREDIENTS_DATA = {
         ],
         "sauces": [
             'Fresh Lime Squeeze',
-            'spicy cashew dressing',
+            'Spicy cashew dressing',
         ],
         "cost":'12.50 USD',
         "calorie" : '1150 Kcal'

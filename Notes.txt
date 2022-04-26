@@ -1,0 +1,4 @@
+Redux-thunk
+Redux-logger
+React-Redux
+Redux-Promise
