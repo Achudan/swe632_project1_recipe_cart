@@ -17,7 +17,7 @@ const RecipeDirectory = () => {
     return (
         <>
         <div className="search input">
-                <input value={searchField} onChange={e => handleChange(e.target.value)} placeholder='Enter your option'/>
+                <input value={searchField} onChange={e => handleChange(e.target.value)} placeholder='Find your dish'/>
             </div>
         
         <div className='directory-menu'>

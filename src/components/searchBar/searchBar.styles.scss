@@ -1,7 +1,7 @@
 
   
   .search input {
-    background-color: white;
+    background-color: #f7d09d24;
     border: 0;
     border-radius: 2px;
     border-top-right-radius: 0px;
@@ -9,7 +9,13 @@
     font-size: 18px;
     padding: 15px;
     height: 30px;
-    width: 300px;
+    width: 500px;
+    border: none;
+    box-shadow: 0px 3px 50px grey;
+    background-image: url('./images/search-icon.png');
+    background-repeat: no-repeat;
+    text-indent: 20px;
+    background-size: contain;
   }
   
   .searchIcon {
