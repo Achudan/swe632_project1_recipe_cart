@@ -3,6 +3,7 @@ import './contact.style.scss';
 import { BsTwitter, BsInstagram } from 'react-icons/bs';
 import { MdCall } from 'react-icons/md';
 import { FaFacebook } from 'react-icons/fa'
+import GoogleMap from "../GoogleMaps/googlemaps.component";
 
 const Contact = () => (
     <div>
@@ -16,6 +17,8 @@ const Contact = () => (
                 <a className="contact-list" href="https://www.fb.com"><FaFacebook/>tastebuds</a>
                 <a className="contact-list" href="https://www.instagram.com"><BsInstagram/>@tastebuds_gram</a>
         </div>
+        <GoogleMap/>
+        
     </div>
 
 )
