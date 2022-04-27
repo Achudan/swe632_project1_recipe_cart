@@ -106,7 +106,7 @@ const Cart = () => {
 
                 <div className="margin">
                     {/* <button className="button">Cancel</button> */}
-                    <CustomButton className="button" onClick={handleCancel}>Cancel</CustomButton>
+                    <a href="/#" target="_blank" onClick={handleCancel}> Cancel</a>
                     {isCancelOpen && <CustomPopUp title='Cancel Order' description='Are you sure to cancel the orders in the cart ?' handleClose={toggleCancelPopup} />}
                     {/* <button className="button">Checkout</button> */}
                     <CustomButton className="button" onClick={handleSubmit}>Checkout</CustomButton>

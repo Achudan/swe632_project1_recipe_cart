@@ -109,6 +109,15 @@
         padding: 8px;
         text-align: left;
         border-bottom: 0px solid #ddd;
+
+        a:link{
+          color: black;
+          text-decoration: underline;
+        }
+        a:hover{
+          color: #638163;
+          text-decoration: underline;
+        }
       }
 
       .button {
@@ -125,6 +134,18 @@
       }
       .margin{
           margin-top: 50px;
+
+          a:link{
+            color: black;
+            text-decoration: underline;
+            padding: 15px;
+          }
+          a:hover{
+            color: #638163;
+            text-decoration: underline;
+            background-color:none;
+            // padding: 8px;
+          }
       }
       .height{
           height: 50px;
