@@ -28,6 +28,7 @@ const IngredientsPage = () => {
 
     const handleSubmit = (elt) => {
         console.log("Included",includedContents)
+        console.log(cartItem)
         if (includedContents.length === 0) {
             togglePopup()
         }
