@@ -31,7 +31,8 @@ const Navbar =  () =>(
             } */}
             {/* {console.log('user',currentUser)} */}
             <Link className='logo-container' to="/cart" >
-                <Bag className='bag' />
+                <Bag className='bag' value='4'/>
+                <span className='badge badge-warning' id='lblCartCount'> 4 </span>
             </Link>
         </div>
         
