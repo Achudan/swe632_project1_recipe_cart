@@ -82,8 +82,8 @@ return(
         
 
             <div className="height"></div>
-            <div>
-                <table>
+            <div className="total-bill-div">
+                <table className="total-table">
                     <tr>
                         <td><b>SUB TOTAL</b></td>
                         <td>$37.50</td>
@@ -92,7 +92,7 @@ return(
                         <td><b>TAX</b></td>
                         <td>$2.50</td>
                     </tr>
-                    <tr>
+                    <tr className="total-tr">
                         <td><b>TOTAL</b></td>
                         <td>$40</td>
                     </tr>

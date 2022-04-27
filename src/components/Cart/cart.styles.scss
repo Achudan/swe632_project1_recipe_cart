@@ -75,18 +75,24 @@
       }
     .paddingtop{
         padding-top: 20px;
+        box-shadow: 7px 5px 17px 0px grey;
     }
     .column {
         float: left;
         width: 50%;
         padding: 10px;
-        height: auto; /* Should be removed. Only for demonstration */
+        height: auto; 
         
       }
       .row{
-          margin-top: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
       }
-      /* Clear floats after the columns */
       .row:after {
         content: "";
         display: table;
@@ -137,11 +143,21 @@
         //display: block;
         flex-direction: unset;
       }
-      
-      .card:hover {
-      //  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      }
-      
+            
       .containerss {
         padding: 2px 16px;
+      }
+
+      .total-table{
+        width: 50%;
+        box-shadow: 7px 6px 18px grey;
+
+        .total-tr{
+          box-shadow: 1px -3px 20px 0px grey;;
+        }
+      }
+
+      .total-bill-div{
+        justify-content: center;
+        display: flex;
       }
