@@ -21,7 +21,7 @@ const RecipeDirectory = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const { data: response } = await axios.get('http://localhost:5005/listings');
+            const { data: response } = await axios.get('http://localhost:5006/listings');
             setData(response);
             setRecipes(response)
             console.log(data);
