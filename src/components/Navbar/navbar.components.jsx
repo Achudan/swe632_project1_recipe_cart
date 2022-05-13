@@ -21,16 +21,16 @@ const Navbar =  () =>(
         
         <div className="options">
         
-            <Link className="option" to="/ingredients/custom">BUILD YOUR OWN RECIPE</Link>
-            <Link className="option" to="/contact">CONTACT</Link>
-            <Link className="option" to="/help">HELP</Link>
+            <Link className="option" to="/">BUILD YOUR OWN RECIPE</Link>
+            <Link className="option" to="/">CONTACT</Link>
+            <Link className="option" to="/">HELP</Link>
             {/* {
                 currentUser?
                 (<div className="option" onClick={()=>auth.signOut()}>{currentUser.displayName.toUpperCase()}</div>):
                 (<Link className="option" to="/signinsignup">SIGN IN</Link>)
             } */}
             {/* {console.log('user',currentUser)} */}
-            <Link className='logo-container' to="/cart" >
+            <Link className='logo-container' to="/" >
                 <Bag className='bag' value='4'/>
                 <span className='badge badge-warning' id='lblCartCount'> 4 </span>
             </Link>
